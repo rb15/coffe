@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="422.0" prefWidth="507.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.profitController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <DatePicker fx:id="date1" onAction="#calc" />
+            <DatePicker fx:id="date2" onAction="#calc" />
+         </children>
+      </HBox>
+       <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
+           <columns>
+               <TableColumn fx:id="prod" prefWidth="75.0" text="produit" />
+               <TableColumn fx:id="vente" prefWidth="75.0" text="vente" />
+               <TableColumn fx:id="profit" prefWidth="75.0" text="profit" />
+           </columns>
+       </TableView>
+      <CheckBox fx:id="prof_p" mnemonicParsing="false" onAction="#calc" text="profit pure" />
+      <Label fx:id="total" />
+   </children>
+</VBox>
